@@ -541,6 +541,11 @@ Please specify your robot name at <obstacle> element.
 </actor>
 ```
 
+### Autonomous Actor (Plugin)
+
+Please visit this [repository](https://github.com/BruceChanJianLe/gazebo-plugin-autonomous-actor) for more information.  
+
+### Trajectory and Collision Attach to Actor (Multiple Plugins)
 
 ## References
 - https://github.com/onlytailei/gym_ped_sim
