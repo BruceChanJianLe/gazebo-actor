@@ -9,11 +9,11 @@ Move, animate, interact with robot with actor now!
 - [Moving Actor Only](#Moving-Actor-Only)
 - [Moving Actor with Animation](#Moving-Actor-with-Animation)
 - [Actor with Plugins](#Actor-with-Plugins)
-    - [Attach Collision Model to Actor (Plugin)](#Attach-Collision-Model-to-Actor-(Plugin))
-    - [Attach Detail Collision Model to Actor (Plugin)](#Attach-Detail-Collision-Model-to-Actor-(Plugin))
-    - [Trajectory for Actor (Plugin)](#Trajectory-for-Actor-(Plugin))
-    - [Autonomous Actor (Plugin)](#Autonomous-Actor-(Plugin))
-    - [Trajectory and Collision Attach to Actor (Multiple Plugins)](#Trajectory-and-Collision-Attach-to-Actor-(Multiple-Plugins))
+    - [Attach Collision Model to Actor (Plugin)](#Attach-Collision-Model-to-Actor-Plugin)
+    - [Attach Detail Collision Model to Actor (Plugin)](#Attach-Detail-Collision-Model-to-Actor-Plugin)
+    - [Trajectory for Actor (Plugin)](#Trajectory-for-Actor-Plugin)
+    - [Autonomous Actor (Plugin)](#Autonomous-Actor-Plugin)
+    - [Trajectory and Collision Attach to Actor (Multiple Plugins)](#Trajectory-and-Collision-Attach-to-Actor-Multiple-Plugins)
 
 ## Assumption
 
