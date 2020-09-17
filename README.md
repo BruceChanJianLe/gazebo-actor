@@ -8,11 +8,12 @@ This repository demonstrates the usage of actor and related plugins in Gazebo.
 - You are running Gazebo Version 9
 - You are on a Linux machine (e.g. Ubuntu18.04)
 
-## Animation
+## Actor Only
 
 Follow the sdf format below to animate a model.  
 Note that animated models have no collision model nor does it interact with gravity.  
 This example is taken from [servicesim_competition](https://github.com/osrf/servicesim/blob/master/servicesim_competition/worlds/follow_actor_demo.world).  
+For more detail please refer to official Gazebo [page](http://gazebosim.org/tutorials?tut=actor&cat=build_robot).
 
 ```xml
 <actor name="number5">
@@ -48,7 +49,7 @@ This example is taken from [servicesim_competition](https://github.com/osrf/serv
 </actor>
 ```
 
-### Animation 
+## Animation with 
 
 ## References
 - https://github.com/onlytailei/gym_ped_sim
