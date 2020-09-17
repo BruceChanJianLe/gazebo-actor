@@ -115,6 +115,12 @@ For more detail please refer to official Gazebo [page](http://gazebosim.org/tuto
 
 ## Actor with Plugins
 
+Follow the sdf format below to animate an actor with plugins in Gazebo world.  
+The focus of the tutorial will be placed on human actors, therefore, I will only explain plugins that are related to human actors.  
+All the plugins can be found in [service_competition](https://github.com/osrf/servicesim/tree/master/servicesim_competition).  
+For AutoActorPlugin, it can be found [here](https://github.com/BruceChanJianLe/gazebo-plugin-autonomous-actor).  
+
+### 
 
 
 ## References
