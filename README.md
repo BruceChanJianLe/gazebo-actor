@@ -392,8 +392,8 @@ Please specify your robot name at <obstacle> element.
     <interpolate_x>true</interpolate_x>
   </animation>
 
+  <!-- Actor plugin -->
   <!-- Actor motion -->
-
   <plugin name="trajectory" filename="libTrajectoryActorPlugin.so">
     
       <target>
@@ -547,5 +547,210 @@ Please visit this [repository](https://github.com/BruceChanJianLe/gazebo-plugin-
 
 ### Trajectory and Collision Attach to Actor (Multiple Plugins)
 
+Follow the sdf format to add multiple plugins to your moving actor.  
+Here we will be adding the box collision model to a trajectory actor.  
+
+```xml
+<!-- Create a static collision model -->
+<model name="human_94763_collision_model">
+  <pose>0 0 -100 0 0 0</pose>
+  <static>true</static>
+  <link name="link">
+    <collision name="link">
+      <pose>0 -0.18 0.05 0 -1.5707963267948966 0</pose>
+      <geometry>
+        <box>
+          <size>0.44 1.62 0.60</size>
+        </box>
+      </geometry>
+    </collision>
+  </link>
+</model>
+
+<!-- Create your actor -->
+<actor name="human_94763">
+
+  <!-- Starting pose, nice for when the world is reset -->
+  <pose>
+    12.1254
+    5.385326
+    1.0
+    1.570796
+    -0.0
+    3.141593
+  </pose>
+
+  <!-- Actor visual model -->
+  <skin>
+    <filename>model://actor/meshes/SKIN_man_green_shirt.dae</filename>
+  </skin>
+
+  <!-- Actor animation -->
+  <animation name="animation">
+    <filename>model://actor/meshes/ANIMATION_walking.dae</filename>
+    <interpolate_x>true</interpolate_x>
+  </animation>
+
+  <!-- Actor plugin 1 -->
+  <!-- Actor motion -->
+  <plugin name="trajectory" filename="libTrajectoryActorPlugin.so">
+    
+      <target>
+        12.1254
+        5.385326
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+    
+      <target>
+        10.3737
+        3.89311
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+    
+      <target>
+        7.96763
+        4.71297
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+    
+      <target>
+        6.41362
+        5.11439
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+    
+      <target>
+        6.32939
+        8.46126
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+    
+      <target>
+        7.37067
+        9.849683
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+    
+      <target>
+        10.5193
+        9.81355
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+    
+      <target>
+        12.1611
+        8.39257
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+    
+      <target>
+        13.1988
+        5.185326
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+    
+      <target>
+        14.704
+        5.185326
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+    
+      <target>
+        14.846853
+        7.988438
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+    
+      <target>
+        16.0257
+        8.12129
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+    
+      <target>
+        16.195299
+        1.99335
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+    
+      <target>
+        14.1699
+        1.91747
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+    
+      <target>
+        14.176
+        5.385326
+        1.0
+        1.570796
+        -0.0
+        3.141593
+      </target>
+    
+
+    <velocity>1.0516294306711416</velocity>
+    <obstacle_margin>1.5</obstacle_margin>
+    <obstacle>my_robot_name</obstacle>
+
+  </plugin>
+
+  <!-- Actor plugin 2 -->
+  <!-- Enable collisions -->  
+    <plugin name="attach_model" filename="libAttachModelPlugin.so">
+      <link>
+        <link_name>human_94763_pose</link_name>
+        <model>
+          <model_name>human_94763_collision_model</model_name>
+        </model>
+      </link>
+    </plugin>
+
+</actor>
+```
+
 ## References
+
 - https://github.com/onlytailei/gym_ped_sim
