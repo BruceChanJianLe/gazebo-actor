@@ -124,6 +124,7 @@ For AutoActorPlugin, it can be found [here](https://github.com/BruceChanJianLe/g
 
 Follow the sdf format below to add the related plugin to your actor.  
 This plugin will add a static model to your moving actor.  
+Here a box collision model is attached to the human actor.  
 
 ```xml
 <!-- Create a static collision model -->
