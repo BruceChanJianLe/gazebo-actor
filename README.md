@@ -766,3 +766,4 @@ Here we will be adding the box collision model to a trajectory actor.
 ## References
 
 - https://github.com/onlytailei/gym_ped_sim
+- https://campus-rover.gitbook.io/lab-notebook/faq/spawning_animated_human
